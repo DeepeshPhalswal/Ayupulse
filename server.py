@@ -24,7 +24,7 @@ def process_health():
             condition = "Low Oxygen!"
         elif temp > 38:
             condition = "High Temp!"
-        elif ir < 50000:
+        elif ir < 2000:
             condition = "Weak Pulse!"
         else:
             condition = "Normal"
