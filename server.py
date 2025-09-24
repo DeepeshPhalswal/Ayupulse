@@ -20,7 +20,7 @@ def process_health():
         ir = data.get('ir')
 
         # --- Simple example logic ---
-        if spo2 < 90:
+        if spo2 < 50:
             condition = "Low Oxygen!"
         elif temp > 38:
             condition = "High Temp!"
