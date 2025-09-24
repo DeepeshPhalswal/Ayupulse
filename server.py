@@ -1,5 +1,13 @@
 # server.py
 from flask import Flask, request, jsonify
+import os
+from dotenv import load_dotenv
+
+# Load .env file
+load_dotenv()
+
+# Access variables
+Port = os.getenv("PORT")
 
 app = Flask(__name__)
 
@@ -26,4 +34,4 @@ def process_health():
         return jsonify({"condition": "Error", "details": str(e)}), 400
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=Port)
